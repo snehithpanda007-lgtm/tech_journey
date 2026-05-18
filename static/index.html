@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Calculator</h1>
+      <div class="card">
+        <input id="expr" class="input" placeholder="Enter expression (e.g. 2+2*3)" />
+        <div class="row">
+          <button id="calcBtn" class="btn primary">Calculate</button>
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+        <div id="result" class="result">Result: —</div>
+      </div>
+      <footer class="footer">API: <code>/api/calc</code> (POST JSON `{ "expr": "2+2" }`)</footer>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
