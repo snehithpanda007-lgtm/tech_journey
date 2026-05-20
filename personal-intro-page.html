@@ -3,36 +3,81 @@
 <head>
     <title>My Personal Intro Page</title>
 </head>
-<body style ="background-color: black;color:white;">
-    <h1>Welcome to My Personal Intro Page</h1>
-    <section class="hero-section">
-        <p>Hello, I'm Snehith!</p>
-        <p>I'm a future software developer.</p>
-    </section>
+<body style ="
+    background-color: black;
+    color:white;">
+    <h1 style="justify-self: center;">Welcome to My Personal Intro Page</h1>
  
-    <section class="about-me-section">
-        <h2>About Me</h2>
-        <p>I am passionate about coding and technology. I enjoy learning new programming languages and working on exciting projects.</p>
-    </section>
+    <div class = "hero-section" 
+        style="
+            display: flex; 
+            justify-content: space-between;">
+            <div class="introduction">
+                <p>Hello, I'm Snehith!</p>
+                <p>I'm a future software developer.</p>
+            </div>
+            <div class="profile-picture">
+                <img src="profile.jpg" 
+                alt="Profile Picture"
+                style="
+                    width: 150px; 
+                    height: 150px; 
+                    border-radius: 50%;">
+            </div>
+    </div>
  
-    <section class ="goals-section">
-        <h2>My Goals</h2>
+    <h2 style="justify-self: center;">About Me</h2>
+    <div class="about-me-section">
+        <p>I am passionate about coding and technology.</p>
+        <p>I enjoy learning new programming languages and working on exciting projects.</p>
+    </div>
+ 
+    <h2 style="justify-self: center;">My Goals</h2>
+    <div class ="goals-section">
         <p>My goal is to become a skilled software developer and contribute to innovative projects that make a positive impact on the world.</p>
-    </section>
- 
-    <section class ="projects-section">
-        <h2>My Projects</h2>
-        <p>Coming soon!</p>
-    </section>
-  
-    <section class="contact-section">
-        <h2>Contact Me</h2>
+    </div>
+
+    <h2 style="justify-self: center;">My Projects</h2>
+    <div class ="projects-section"
+        display: flex;
+        flex-direction: row;>
+        <div class="project1">
+            <h3>Project 1: Personal Portfolio Website</h3>
+            <p>This project is a personal portfolio website that showcases my skills, projects, and experience. It is built using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project2">
+            <h3>Project 2: Coming Soon</h3>
+        </div>
+    </div>
+
+    <h2 style="justify-self: center;">Contact Me</h2>
+    <div class="contact-section">
         <p>You can reach me at:</p>
         <ul>
             <li>Email: snehithpanda007@gmail.com</li>
             <li>GitHub: https://github.com/snehithpanda007-lgtm</li>
             <li>LinkedIn: https://www.linkedin.com/in/snehith-panda-9314a43b9</li>
         </ul>
-    </section>
+    </div>
+    
+    <style>
+        .hero-section, .about-me-section, .goals-section, .projects-section, .contact-section {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 5px;
+        }
+ 
+        .profile-picture {
+           background-color: #333;
+           border-radius: 5px;
+        }
+
+        .project1, .project2 {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
 </body>
 </html>
