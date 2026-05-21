@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p>You have clicked the button <span id="count">0</span> times.</p>
+    <button id="increment">Click me!</button>
+    <button id="decrement">Decrement</button>
+    <button id="reset">Reset</button>
+
+    <h1>Random quote</h1>
+    <button id="new-quote">Get a new quote</button>
+    <p id="quote"></p>
+
+    <h1>Change Background Color</h1>
+    <button id="change-color">Change Color</button>
+    <p id="color-text">The color is <span id="current-color">red</span>.</p>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        #quote {
+            font-style: italic;
+            margin-top: 20px;
+        }           
+    </style>
+
+    <script>
+        let count = 0;
+        let colors = ['red', 'green', 'blue', 'orange', 'purple'];
+        const incrementButton = document.getElementById('increment');
+        const decrementButton = document.getElementById('decrement');
+        const resetButton = document.getElementById('reset');
+        const countElement = document.getElementById('count');
+        const changeColorButton = document.getElementById('change-color');
+        const colorTextElement = document.getElementById('color-text');
+        const currentColorElement = document.getElementById('current-color');
+        const newQuoteButton = document.getElementById('new-quote');
+        incrementButton.addEventListener('click', () => {
+            count++;
+            countElement.textContent = count;
+        });
+
+        decrementButton.addEventListener('click', () => {
+            count--;
+            countElement.textContent = count;
+        });
+
+        resetButton.addEventListener('click', () => {
+            count = 0;
+            countElement.textContent = count;
+        });
+
+        changeColorButton.addEventListener('click', () => {
+            const Color = colors[Math.floor(Math.random() * colors.length)];
+            currentColorElement.textContent = Color;
+            document.body.style.backgroundColor = Color;
+        });
+
+        newQuoteButton.addEventListener('click', () => {
+            const quotes = [
+                "The only way to do great work is to love what you do.",
+                "Innovation distinguishes between a leader and a follower.",
+                "Your time is limited, don't waste it living someone else's life."
+            ];
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote').textContent = randomQuote;
+        });
+    </script>
+</body>
+</html>
